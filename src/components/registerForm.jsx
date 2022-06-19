@@ -20,7 +20,7 @@ class RegisterForm extends Form {
   doSubmit = async () => {
     try {
       // await register(this.state.data);
-      const response = await axios.post("http://localhost:3900/api/users", {
+      const response = await axios.post("/users", {
         name: this.state.data.name,
         password: this.state.data.password,
         email: this.state.data.username,

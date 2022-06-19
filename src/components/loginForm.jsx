@@ -23,7 +23,7 @@ class LoginForm extends Form {
     try {
       const { data } = this.state;
       // const {data:jwt} = await login(data.username, data.password);
-      const { data: jwt } = await axios.post("http://localhost:3900/api/auth", {
+      const { data: jwt } = await axios.post("/auth", {
         email: data.username,
         password: data.password,
       });
